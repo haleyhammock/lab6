@@ -37,11 +37,12 @@ function addProjectDetails(e) {
 
 function callBackFn(result){
 	console.log(result)
-	var stringHTML = '<a href="#" class="thumbnail">' +
+	var stringHTML =
     '<img src="' + result['image'] + '" class="detailsImage">' +
     '<p>' + result['title'] + '</p>' +
     '<p><small>' + result['date'] +
-    '</small></p></a>';
+    '</small></p>' +
+    '<p>' + result['summary'] + '</p>';
 	$("#project" + result.id + " .details").html(stringHTML);
 
 }
